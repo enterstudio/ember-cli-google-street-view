@@ -9,7 +9,9 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each"
+    "test": "ember try:each",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -51,10 +53,12 @@
     "ember cli street view"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.6"
+    "ember-cli-babel": "^5.1.6",
+    "snyk": "^1.189.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "demoURL": "http://cometaworks.github.io/ember-cli-google-street-view"
-  }
+  },
+  "snyk": true
 }
